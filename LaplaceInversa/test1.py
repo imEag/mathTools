@@ -2,9 +2,9 @@ import sympy as sym
 
 # INGRESO
 s = sym.Symbol('s')
-a = sym.pi
 uH = sym.Heaviside
-ec = 1 / (s**3 + s)
+""" ec = 1 / (s**3 + s) """
+ec = ((1/s**2) - (sym.exp(-s)/s**2) - (sym.exp(-s)/s)) * (1/(s+2))
 
 # PROCEDIMIENTO
 # Transformando a Laplace

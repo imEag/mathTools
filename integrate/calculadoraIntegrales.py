@@ -32,7 +32,7 @@ while True:
         termino = input('Ingrese el término con el que se va a integrar: ')
         sol = integralIndefinida(expresion, termino)
         mostrar(sol)
-        op2 = input('1. Resolver otra integral. \n2. salir')
+        op2 = input('1. Resolver otra integral. \n2. salir  \n:  ')
         if (op2 == '1'):
             pass
         else:
@@ -44,7 +44,7 @@ while True:
         limSuperior = input('Ingrese el límite superior: ')
         sol = integralDefinida(expresion, termino, limInferior, limSuperior)
         mostrar(sol)
-        op2 = input('1. Resolver otra integral. \n2. salir')
+        op2 = input('1. Resolver otra integral. \n2. salir  \n: ')
         if (op2 == '1'):
             pass
         else:
