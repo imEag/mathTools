@@ -1,12 +1,15 @@
 # Polos y ceros de funcion de transferencia H(s)
+
 import sympy as sym
 
 # INGRESO
 s = sym.Symbol('s')
+e = sym.exp
 # Ps es numerador, Qs es denominador
 
 print("""Calculadora de fracciones parciales, 
-      ingrese las expresiones en términos de s \n""")
+ingrese las expresiones en términos de s.
+\n""")
 
 numerador = input('ingrese el numerador: ')
 denominador = input('ingrese el denominador: ')
