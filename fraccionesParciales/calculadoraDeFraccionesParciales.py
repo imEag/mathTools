@@ -7,15 +7,6 @@ s = sym.Symbol('s')
 e = sym.exp
 # Ps es numerador, Qs es denominador
 
-print("""Calculadora de fracciones parciales, 
-ingrese las expresiones en términos de s.
-\n""")
-
-numerador = input('ingrese el numerador: ')
-denominador = input('ingrese el denominador: ')
-numerador = sym.parse_expr(numerador)
-denominador = sym.parse_expr(denominador)
-
 def calcular(numerador, denominador):
     # PROCEDIMIENTO
     P = numerador.as_poly(s)
@@ -38,8 +29,23 @@ def mostrar(resultado, ecuacion, polos):
     sym.pprint(resultado)
     print('\n polos: \n', polos)
 
-resultado = calcular(numerador, denominador)[0]
-ecuacion = calcular(numerador, denominador)[1]
-polos = calcular(numerador, denominador)[2]
+print("""Calculadora de fracciones parciales, 
+ingrese las expresiones en términos de s.
+\n""")
 
-mostrar(resultado, ecuacion, polos)
+while True:
+    numerador = input('ingrese el numerador: ')
+    denominador = input('ingrese el denominador: ')
+    numerador = sym.parse_expr(numerador)
+    denominador = sym.parse_expr(denominador)
+
+    resultado = calcular(numerador, denominador)[0]
+    ecuacion = calcular(numerador, denominador)[1]
+    polos = calcular(numerador, denominador)[2]
+
+    mostrar(resultado, ecuacion, polos)
+    op = input('1. Resolver otra expresión. \n2. Salir\n : ')
+    if (op == '1'):
+        pass
+    else:
+        break
