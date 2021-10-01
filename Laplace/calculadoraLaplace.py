@@ -22,6 +22,8 @@ def mostrar(exp):
 
 print("""Calculadora de Laplace normal e inversa.
 \n""")
+print("""Para escribir un escalon unitario u(t) escriba Heaviside(aquí va el argumento), ejemplo: Heaviside(t-1). 
+Para escribir e, escriba exp(argumento), ejemplo: exp(2*t)""")
 while True:
     op = input("""1. Laplace.
 2. Laplace inversa.
@@ -29,7 +31,7 @@ while True:
     : """)
 
     if (op == '1'):
-        print('Para escribir un escalon unitario u(t) escriba Heaviside(aquí va el argumento), ejemplo: Heaviside(t-1). \n')
+        
         expresion = input(
             'Ingrese la expresión (ingrese las expresiones en términos de t): ')
         sol = laplace(expresion)
